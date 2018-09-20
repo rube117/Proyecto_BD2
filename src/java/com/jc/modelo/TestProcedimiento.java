@@ -23,8 +23,8 @@ public class TestProcedimiento {
     }
 
     public static void basico() throws Exception {
-        Conexion c = new Conexion();
-        Connection con = c.conectarse("system", "system", "xe");
+       
+        Connection con = Conexion.conectarse("system", "system", "xe");
         CallableStatement callate = con.prepareCall("{call guardar_hola(?,?)}");
         callate.setInt(1,1);
         callate.setString(2,"probando oracle" );
