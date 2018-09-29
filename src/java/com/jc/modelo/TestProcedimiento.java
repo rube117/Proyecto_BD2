@@ -25,8 +25,8 @@ public class TestProcedimiento {
     public static void basico() throws Exception {
        
         Connection con = Conexion.conectarse("system", "system", "xe");
-        CallableStatement callate = con.prepareCall("{call guardar_hola(?,?)}");
-        callate.setInt(1,1);
+        CallableStatement callate = con.prepareCall("{call guardar_dance(?,?)}");
+        callate.setInt(1,2);
         callate.setString(2,"probando oracle" );
   
  
