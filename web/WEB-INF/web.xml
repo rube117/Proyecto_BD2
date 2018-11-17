@@ -6,7 +6,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletAutenticar</servlet-name>
-        <url-pattern>/autenticar</url-pattern>
+        <url-pattern>/autenticar.php</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
