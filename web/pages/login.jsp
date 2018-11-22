@@ -1,3 +1,10 @@
+<%-- 
+    Document   : login
+    Created on : Nov 21, 2018, 9:23:11 PM
+    Author     : campitos
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 

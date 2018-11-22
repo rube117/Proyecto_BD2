@@ -26,14 +26,30 @@ public class ServletAutenticar extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        
+        try {
             response.setContentType("text/html;charset=UTF-8");
             
             String algo=request.getParameter("usuario");
             String otro=request.getParameter("password");
             
+            Connection con=      Conexion.conectarse(otro, algo,"xe" );
+            
+            RequestDispatcher despachar=request.getRequestDispatcher("/index.jsp");
+            despachar.forward(request, response);
+            
+        } catch (Exception ex) {
+             RequestDispatcher despachar=request.getRequestDispatcher("/error.jsp");
+            despachar.forward(request, response);
+            
+        }
+            
+      
+        }
+            
          
           
             
        
-    }
+    
 }
