@@ -5,8 +5,12 @@
  */
 package com.jc.controlador;
 
+import com.jc.modelo.Conexion;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,18 +25,15 @@ public class ServletAutenticar extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-     
-        String algo=request.getParameter("usuario");
-        String otro=request.getParameter("password");
+        
+            response.setContentType("text/html;charset=UTF-8");
+            
+            String algo=request.getParameter("usuario");
+            String otro=request.getParameter("password");
+            
+         
+          
+            
        
-        RequestDispatcher despachador=  request.getRequestDispatcher("pages/index.jsp");
-       
-        
-      // response.sendRedirect("pages/blank.html");
-        
-        
-      despachador.include(request, response);
-        
     }
 }
