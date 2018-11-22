@@ -35,11 +35,11 @@ public class ServletAutenticar extends HttpServlet {
             
             Connection con=      Conexion.conectarse(otro, algo,"xe" );
             
-            RequestDispatcher despachar=request.getRequestDispatcher("/index.jsp");
+            RequestDispatcher despachar=request.getRequestDispatcher("pages/index.jsp");
             despachar.forward(request, response);
             
         } catch (Exception ex) {
-             RequestDispatcher despachar=request.getRequestDispatcher("/error.jsp");
+             RequestDispatcher despachar=request.getRequestDispatcher("pages/error.jsp");
             despachar.forward(request, response);
             
         }
