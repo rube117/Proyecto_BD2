@@ -26,10 +26,13 @@ public class ServletAutenticar extends HttpServlet {
         String algo=request.getParameter("usuario");
         String otro=request.getParameter("password");
        
-        RequestDispatcher despachador=  request.getRequestDispatcher("pages/index.html");
-        despachador.forward(request, response);
+        RequestDispatcher despachador=  request.getRequestDispatcher("pages/index.jsp");
+       
         
-      
+      // response.sendRedirect("pages/blank.html");
+        
+        
+      despachador.include(request, response);
         
     }
 }
