@@ -33,7 +33,7 @@ public class ServletAutenticar extends HttpServlet {
             String algo=request.getParameter("usuario");
             String otro=request.getParameter("password");
             
-            Connection con=      Conexion.conectarse(otro, algo,"xe" );
+            Connection con=      Conexion.conectarse(otro, algo,"orcl" );
             
             RequestDispatcher despachar=request.getRequestDispatcher("pages/index.jsp");
             despachar.forward(request, response);
@@ -48,8 +48,5 @@ public class ServletAutenticar extends HttpServlet {
         }
             
          
-          
-            
-       
     
 }
