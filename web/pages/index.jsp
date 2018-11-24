@@ -277,7 +277,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="${pageContext.request.contextPath}/pages/index.jsp.jsp"><i class="fa fa-heart fa-fw"></i> Principal</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Almacén<span class="fa arrow"></span></a>
